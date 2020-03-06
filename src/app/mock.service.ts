@@ -13,6 +13,7 @@ export class MockService {
   }
 
 
+  colour : string = 'blue';
   custForm: FormGroup;
   lstHeader: any = ['', 'First Name', 'Last Name', 'Mobile No.', 'Email', 'Actions'] //header
 

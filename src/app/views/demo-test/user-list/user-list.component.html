@@ -1,3 +1,5 @@
+
+<!-- <input type="text" [(ngModel)] = "Colour" class="form-control mt-5" [style.background]="Colour"> -->
 <div class="row mx-5 mt-5">
     <div class="form-group">
         <div class="col-12 col-md-12">
@@ -69,7 +71,7 @@
                                         *ngIf="this._mK.custForm.get('mono').hasError('pattern') && this._mK.custForm.get('mono').touched">Enter
                                         Valid Mobile number max 10 </span>
                                 </td>
-                                <td> <input type="text" formControlName="email" [(ngModel)]=user.email>
+                                <td> <input type="text" formControlName="email" [(ngModel)]=user.email class="form-control">
                                     <span class="tect-danger"
                                         *ngIf="this._mK.custForm.get('email').hasError('required') && this._mK.custForm.get('email').touched">This
                                         field is required</span>

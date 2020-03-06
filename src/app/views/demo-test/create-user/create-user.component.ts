@@ -9,15 +9,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./create-user.component.css']
 })
 export class CreateUserComponent implements OnInit {
-
-
-
   lstUser: any = [];
   isChecked: boolean = false;
   isdisabled: boolean = true;
 
+  // get Colour() {
+  //   return this._mK.colour;
+  // }
 
-
+  // set Colour(value) {
+  //   this._mK.colour = value;
+  // }
 
   saveRecord() {
     for (const i in this._mK.custForm.controls) {

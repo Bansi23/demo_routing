@@ -77,6 +77,15 @@ export class UserListComponent implements OnInit {
     this.lstUser.splice(i, 1)
   }
 
+
+  // get Colour() {
+  //   return this._mK.colour;
+  // }
+
+  // set Colour(value) {
+  //   this._mK.colour = value;
+  // }
+
   constructor(private _mK: MockService, private _router: Router) { }
 
   ngOnInit(): void {
