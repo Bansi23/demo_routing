@@ -1,0 +1,66 @@
+<form [formGroup]="this._mK.custForm">
+
+    <div class="row">
+        <div class="col-12 col-lg-6 col-md-6">
+            <div class="form-group">
+                <label>First Name</label>
+                <input type="text" class="form-control" formControlName="fname">
+                <span class="text-danger"
+                    *ngIf="this._mK.custForm.get('fname').hasError('required') && this._mK.custForm.get('fname').touched">
+                    This Fiels is required
+                </span>
+                <span class="text-danger"
+                    *ngIf="this._mK.custForm.get('fname').hasError('pattern') && this._mK.custForm.get('fname').touched">
+                    Enter Minmimum 2 charecter
+                </span>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-6 col-md-6">
+            <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" class="form-control" formControlName="lname">
+                <span class="text-danger"
+                    *ngIf="this._mK.custForm.get('lname').hasError('required') && this._mK.custForm.get('lname').touched">
+                    This Fiels is required
+                </span>
+                <span class="text-danger"
+                    *ngIf="this._mK.custForm.get('lname').hasError('pattern') && this._mK.custForm.get('lname').touched">
+                    Enter Minmimum 2 charecter
+                </span>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-6 col-md-6">
+            <div class="form-group">
+                <label>Mobile Number</label>
+                <input type="text" class="form-control" formControlName="mono">
+                <span class="text-danger"
+                    *ngIf="this._mK.custForm.get('mono').hasError('required') && this._mK.custForm.get('mono').touched">
+                    This Fiels is required
+                </span>
+                <span class="text-danger"
+                    *ngIf="this._mK.custForm.get('mono').hasError('pattern') && this._mK.custForm.get('mono').touched">
+                    Enter Valid Mobile Number
+                </span>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-6 col-md-6">
+            <div class="form-group">
+                <label>Email</label>
+                <input type="text" class="form-control" formControlName="email">
+                <span class="text-danger"
+                    *ngIf="this._mK.custForm.get('email').hasError('required') && this._mK.custForm.get('email').touched">
+                    This Fiels is required
+                </span>
+                <span class="text-danger"
+                    *ngIf="this._mK.custForm.get('email').hasError('pattern') && this._mK.custForm.get('email').touched">
+                    Enter Valid Email Adress
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <button class="btn btn-primary btn-sm pull-right mx-3 mb-4" (click)="saveRecord()">Save</button>
+</form>
